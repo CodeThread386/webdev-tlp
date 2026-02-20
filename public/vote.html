@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote - Techloop Polling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="pollQuestion">Loading...</h1>
+    </header>
+
+    <main class="vote-section">
+      <div id="errorMsg" class="error-msg" style="display: none;"></div>
+      <div id="optionsContainer" class="vote-options"></div>
+      <div id="votedMsg" class="voted-msg" style="display: none;">
+        <p>✓ Thanks for voting!</p>
+        <a href="#" id="viewResults">View live results</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/vote.js"></script>
+</body>
+</html>

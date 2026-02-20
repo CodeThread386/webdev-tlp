@@ -1,0 +1,370 @@
+/* Techloop Polling - Workshop Styles */
+
+:root {
+  --bg: #0f0f14;
+  --surface: #1a1a22;
+  --surface-hover: #22222e;
+  --text: #e8e8ed;
+  --text-muted: #8b8b9a;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --success: #22c55e;
+  --error: #ef4444;
+  --border: #2d2d3a;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* Forms */
+.poll-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+.option-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.option-input {
+  flex: 1;
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-icon:hover {
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
+}
+
+.btn-add {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.25rem;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+/* Poll results */
+.poll-results {
+  flex: 1;
+}
+
+.results-list {
+  margin-bottom: 2rem;
+}
+
+.result-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-bar-wrap {
+  flex: 1;
+  min-width: 80px;
+  height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.result-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.result-count {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 2rem;
+  text-align: right;
+}
+
+/* Share section */
+.share-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.share-section h3,
+.share-section h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.share-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.share-row input {
+  flex: 1;
+}
+
+.share-hint {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.qr-section {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.qr-section h4 {
+  margin-bottom: 0.75rem;
+}
+
+#qrContainer {
+  display: inline-block;
+  padding: 12px;
+  background: white;
+  border-radius: var(--radius-sm);
+}
+
+#qrContainer canvas {
+  display: block;
+}
+
+/* Vote page */
+.vote-section {
+  flex: 1;
+}
+
+.vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vote-option {
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vote-option:hover {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+}
+
+.vote-option.voted {
+  border-color: var(--success);
+  background: rgba(34, 197, 94, 0.15);
+  cursor: default;
+}
+
+.vote-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.error-msg {
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid var(--error);
+  border-radius: var(--radius-sm);
+  color: var(--error);
+  margin-bottom: 1rem;
+}
+
+.voted-msg {
+  text-align: center;
+  padding: 2rem;
+}
+
+.voted-msg p {
+  font-size: 1.1rem;
+  color: var(--success);
+  margin: 0 0 1rem 0;
+}
+
+.voted-msg a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.voted-msg a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}

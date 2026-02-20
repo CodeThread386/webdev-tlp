@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poll Results - Techloop Polling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="/" class="back-link">← New poll</a>
+      <h1 id="pollQuestion">Loading...</h1>
+    </header>
+
+    <main class="poll-results">
+      <div id="resultsContainer" class="results-list"></div>
+
+      <div class="share-section">
+        <h3>Share this poll</h3>
+        <div class="share-row">
+          <input type="text" id="shareUrl" readonly>
+          <button type="button" id="copyBtn" class="btn-secondary">Copy</button>
+        </div>
+        <p class="share-hint">Participants open this link to vote. Results update live.</p>
+
+        <div class="qr-section">
+          <h4>Or scan QR code</h4>
+          <div id="qrContainer"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/poll.js"></script>
+</body>
+</html>
