@@ -27,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Deploy Online
 
-### Render (recommended, free tier)
+### Render
 
 1. Push this repo to GitHub
 2. Go to [render.com](https://render.com) → New → Web Service
@@ -39,17 +39,6 @@ Open [http://localhost:3000](http://localhost:3000)
 5. Deploy
 
 Your app will get a URL like `https://your-app.onrender.com`
-
-### Railway
-
-1. Push to GitHub
-2. Go to [railway.app](https://railway.app) → New Project → Deploy from GitHub
-3. Select repo; Railway auto-detects Node.js
-4. Deploy
-
-### Other platforms
-
-Works on any Node.js host (Fly.io, Heroku, etc.). Set `PORT` env var if required.
 
 ## Project Structure
 
@@ -68,15 +57,5 @@ polling/
 │       └── vote.js
 └── README.md
 ```
-
-## Workshop Flow (2.5 hr hands-on)
-
-1. **Setup** – `npm init`, install express, socket.io
-2. **Express** – Static files, `POST /api/polls`, `GET /api/polls/:id`
-3. **Socket.io** – `join`, `vote`, `emit('update')`
-4. **Frontend** – Create form, poll view, vote view
-5. **Deploy** – Push to Render/Railway
-
----
 
 Techloop+ WebDev Workshop
