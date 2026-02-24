@@ -2,6 +2,7 @@
   "name": "techloop-polling",
   "version": "1.0.0",
   "description": "Real-time polling system - Techloop+ WebDev Workshop",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

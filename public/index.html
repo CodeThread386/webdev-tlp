@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- CREATE POLL PAGE - Landing page where anyone can create a new poll -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,6 +15,7 @@
     </header>
 
     <main class="create-poll">
+      <!-- id="pollForm" - create.js uses this to attach the submit handler -->
       <form id="pollForm" class="poll-form">
         <div class="form-group">
           <label for="question">Your question</label>
@@ -22,6 +24,7 @@
 
         <div class="form-group">
           <label>Options</label>
+          <!-- optionsContainer - create.js adds/removes option rows here -->
           <div id="optionsContainer">
             <div class="option-row">
               <input type="text" class="option-input" placeholder="Option 1" required>
@@ -52,6 +55,7 @@
     </footer>
   </div>
 
-  <script src="js/create.js"></script>
+  <!-- type="module" = ES modules, loads after DOM is ready -->
+  <script type="module" src="js/create.js"></script>
 </body>
 </html>

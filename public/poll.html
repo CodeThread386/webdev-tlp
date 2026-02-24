@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- POLL RESULTS PAGE - Host view: live results, share URL, QR code. URL: poll.html?id=xxx -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,10 +11,12 @@
   <div class="container">
     <header class="header">
       <a href="/" class="back-link">← New poll</a>
+      <!-- poll.js fills this with the question, updates stay as "Loading..." until data loads -->
       <h1 id="pollQuestion">Loading...</h1>
     </header>
 
     <main class="poll-results">
+      <!-- resultsContainer - poll.js renders vote bars here, updates in real time via Socket.io -->
       <div id="resultsContainer" class="results-list"></div>
 
       <div class="share-section">
@@ -32,7 +35,6 @@
     </main>
   </div>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="js/poll.js"></script>
+  <script type="module" src="js/poll.js"></script>
 </body>
 </html>
